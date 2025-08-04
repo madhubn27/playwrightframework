@@ -1,0 +1,28 @@
+{
+  "name": "playwrightytall",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test-dev": "cross-env ENV_NAME=dev npx playwright test",
+    "test-stg": "cross-env ENV_NAME=stg npx playwright test",
+    "test_dev_cr_hd": "cross-env ENV_NAME=dev npx playwright test --project=chromium --headed",
+    "test_dev_fr_hd": "cross-env ENV_NAME=dev npx playwright test --project=firefox --headed",
+    "test_dev_cr_ui":"cross-env ENV_NAME=dev npx playwright test  --ui",
+    "test_smoke_cr_hd":"cross-env ENV_NAME=dev npx playwright test  --project=chromium --grep=@UI",
+    "test_dev_Visual_cr_hd":"cross-env ENV_NAME=dev npx playwright test  --project=chromium --grep=@VISUAL",
+    " ":"cross-env ENV_NAME=dev npx playwright test  --project=chromium --last-failed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.1.0"
+  },
+  "dependencies": {
+    "cross-env": "^10.0.0",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.1"
+  }
+}
