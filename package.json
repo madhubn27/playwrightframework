@@ -7,10 +7,11 @@
     "test-stg": "cross-env ENV_NAME=stg npx playwright test",
     "test_dev_cr_hd": "cross-env ENV_NAME=dev npx playwright test --project=chromium --headed",
     "test_dev_fr_hd": "cross-env ENV_NAME=dev npx playwright test --project=firefox --headed",
-    "test_dev_cr_ui":"cross-env ENV_NAME=dev npx playwright test  --ui",
-    "test_smoke_cr_hd":"cross-env ENV_NAME=dev npx playwright test  --project=chromium --grep=@UI",
-    "test_dev_Visual_cr_hd":"cross-env ENV_NAME=dev npx playwright test  --project=chromium --grep=@VISUAL",
-    " ":"cross-env ENV_NAME=dev npx playwright test  --project=chromium --last-failed"
+    "test_dev_cr_ui": "cross-env ENV_NAME=dev npx playwright test  --ui",
+    "test_smoke_cr_hd": "cross-env ENV_NAME=dev npx playwright test  --project=chromium --grep=@UI",
+    "test_dev_Visual_cr_hd": "cross-env ENV_NAME=dev npx playwright test  --project=chromium --grep=@VISUAL",
+    " test-last-failed": "cross-env ENV_NAME=dev npx playwright test  --project=chromium --last-failed",
+    "test-api-dev": "cross-env ENV_NAME=dev npx playwright test  --project=apiTest"
   },
   "keywords": [],
   "author": "",
@@ -21,8 +22,10 @@
     "@types/node": "^24.1.0"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.9.0",
     "cross-env": "^10.0.0",
     "crypto-js": "^4.2.0",
-    "dotenv": "^17.2.1"
+    "dotenv": "^17.2.1",
+    "luxon": "^3.7.1"
   }
 }

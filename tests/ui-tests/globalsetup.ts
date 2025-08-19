@@ -1,5 +1,7 @@
 import { expect } from '@playwright/test';
-import { test } from '../fixtures/common-fixture'
+import { test } from '../../fixtures/common-fixture'
+import dotenv from 'dotenv';
+dotenv.config(); 
 
 
 test('Globalsetup for Auto Login', async({page, loginpage,dashboardpage, commonutils})=>{
